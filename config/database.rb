@@ -5,7 +5,7 @@ configure :test do
     database: 'mmbot_test',
     pool: 5,
     username: 'postgres',
-    host: 'postgres'
+    host: 'db'
   }
 end
    
@@ -16,6 +16,6 @@ configure :development do
     database: 'mmbot_development',
     pool: 5,
     username: 'postgres',
-    host: 'postgres'
+    host: 'db'
   }
 end
