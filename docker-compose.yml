@@ -1,0 +1,26 @@
+version: '3.5'
+
+services:
+  app:
+    build: .
+    tty: true
+    stdin_open: true
+    command: bash -c "while [ true ]; do sleep 10; done"
+    container_name: mmbot
+    volumes:
+      - .:/mmbot
+    ports:
+      - "9292:9292"
+    expose:
+      - "3000"
+    depends_on:
+      - db
+
+  db:
+    container_name: mmbot-db
+    image: "postgres:9.5"
+    volumes:
+      - postgres:/var/lib/postgresql/data
+
+volumes:
+  postgres:
