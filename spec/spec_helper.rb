@@ -1,7 +1,7 @@
 require 'rspec'
 require 'rack/test'
 require 'ffaker'
-require 'pg_search'
+require "pg_search"
 require_relative '../app.rb'
  
 Dir["./spec/support/**/*.rb"].each { |f| require f }
