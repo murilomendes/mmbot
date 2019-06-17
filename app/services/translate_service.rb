@@ -1,5 +1,5 @@
 class TranslateService
-  def initialize(word_to_translate)
+  def initialize(params)
     @word_to_translate = word_to_translate
   end
 
