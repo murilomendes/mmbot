@@ -5,6 +5,7 @@ class TranslateService
 
   def call
     translator = Yandex::Translator.new(ENV["YANDEX_API_KEY"])
-    translator.translate @word_to_translate, from: "en"
+    translation = translator.translate @word_to_translate, from: "en"
+    translator.translate @word_to_translate, from: "pt" if @word_to_translate == translation
   end
 end
